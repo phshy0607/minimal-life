@@ -5,7 +5,8 @@
 html,
 body,
 #root {
-  font-family: 'PingFang SC Regular', 'Candara', sans-serif;
+  // font-family: 'PingFang SC Regular', 'Candara', sans-serif;
+  @apply font-mono;
   height: 100%;
   width: 100%;
 }
