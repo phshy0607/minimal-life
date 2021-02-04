@@ -18,7 +18,7 @@
   "eslint.options": {
     "configFile": "./.eslintrc.js"
   },
-  "tailwindCSS.includeLanguages": {
-    "plaintext": "jsx"
+  "editor.quickSuggestions": {
+    "strings": true
   }
 }

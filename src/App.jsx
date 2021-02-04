@@ -1,9 +1,8 @@
 import React from 'react'
-import Layout from './components/Layout'
-import Footer from './components/Footer'
-import Title from './components/Title'
-import LeftContent from './components/LeftContent'
-import RightContent from './components/RightContent'
+import Layout from './layouts/Layout'
+import Footer from './layouts/Footer'
+import LeftContent from './layouts/LeftContent'
+import RightContent from './layouts/RightContent'
 
 function App() {
   return (
