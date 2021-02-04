@@ -1,16 +1,13 @@
-import React from 'react'
-import Layout from './layouts/Layout'
-import Footer from './layouts/Footer'
-import LeftContent from './layouts/LeftContent'
-import RightContent from './layouts/RightContent'
+import React, { Suspense } from 'react'
+import { HashRouter, useRouteMatch } from 'react-router-dom'
+import { renderRoutes } from 'react-router-config'
+import routes from './routes'
 
 function App() {
   return (
-    <Layout
-      left={<LeftContent />}
-      right={<RightContent />}
-      footer={<Footer />}
-    />
+    <HashRouter>
+      <Suspense fallback={null}>{renderRoutes(routes)}</Suspense>
+    </HashRouter>
   )
 }
 
