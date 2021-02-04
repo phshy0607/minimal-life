@@ -1,7 +1,8 @@
 import React from 'react'
 
+const title = 'Stay awhile and listen'
 function Title() {
-  return <span className="text-3xl">I&apos;d rather be sweating</span>
+  return <span className="text-3xl">{title}</span>
 }
 
 export default Title
