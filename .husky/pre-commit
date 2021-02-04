@@ -1,5 +1,0 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
-git config user.name phshy0607
-git config user.email phshy0607@126.com
