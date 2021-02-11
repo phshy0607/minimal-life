@@ -5,8 +5,12 @@
 html,
 body,
 #root {
+  @apply font-light;
   // font-family: 'PingFang SC Regular', 'Candara', sans-serif;
-  @apply font-mono;
   height: 100%;
   width: 100%;
+}
+
+.overflow-auto {
+  scroll-behavior: smooth;
 }

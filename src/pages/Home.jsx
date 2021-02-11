@@ -2,7 +2,7 @@ import React from 'react'
 import RecentPostList from '../components/RecentPostList'
 import RecentRepoList from '../components/RecentRepoList'
 
-function RightContent() {
+function Home() {
   return (
     <div className="space-y-20">
       <RecentPostList />
@@ -11,4 +11,4 @@ function RightContent() {
   )
 }
 
-export default RightContent
+export default Home

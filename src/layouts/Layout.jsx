@@ -3,12 +3,19 @@ import React from 'react'
 function Layout(props) {
   const { left, right, footer } = props
   return (
-    <div className="h-full bg-gray-50 flex flex-col">
-      <main className="flex flex-1 py-20 md:px-2 lg:px-10">
-        <div className="flex-none w-2/5">{left}</div>
-        <div className="flex-1">{right}</div>
+    <div className="h-screen bg-gray-50 flex flex-col">
+      <main className="flex flex-1 md:px-2 lg:px-10 overflow-hidden">
+        <div
+          id="left"
+          className="flex flex-col flex-none w-2/5 sm:hidden lg:flex md:hidden xl:flex"
+        >
+          {left}
+          {footer && <footer className="flex-initial">{footer}</footer>}
+        </div>
+        <div className="flex-1 overflow-auto my-6 px-4" id="right">
+          {right}
+        </div>
       </main>
-      {footer && <footer className="flex-none">{footer}</footer>}
     </div>
   )
 }

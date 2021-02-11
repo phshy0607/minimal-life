@@ -1,10 +1,16 @@
 import React from 'react'
+import dayjs from 'dayjs'
+import _noop from 'lodash/noop'
 
-function PostItem() {
+function PostItem(props) {
+  const { title, date, onClick = _noop } = props
   return (
-    <div className="flex items-center justify-between cursor-pointer">
-      <div>A very long long title</div>
-      <div>2020-01-02 21:30</div>
+    <div
+      className="flex items-center justify-between cursor-pointer"
+      onClick={onClick}
+    >
+      <div>{title}</div>
+      <div>{date && dayjs(date).format('YYYY-MM-DD HH:mm')}</div>
     </div>
   )
 }
