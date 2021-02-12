@@ -2,32 +2,19 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import _toString from 'lodash/toString'
 import { useRoute, useSelector } from '../hooks'
 import { fetchIssueByIssueNumber } from '../services/issues'
-import '../style/markdown.scss'
 import ListHeader from '../components/ListHeader'
 import GoTop from '../components/GoTop'
+import Comments from '../components/Comments'
+import { formatDate } from '../utils'
+import '../style/markdown.scss'
 
 function Post() {
   const { params, history } = useRoute()
   const issueList = useSelector(({ issues }) => issues.issueList)
+
   const [post, setPost] = useState(null)
 
   useEffect(() => {
-    window.marked.setOptions({
-      renderer: new window.marked.Renderer(),
-      highlight(code, language) {
-        const hljs = window.hljs
-        const validLanguage = hljs.getLanguage(language)
-          ? language
-          : 'plaintext'
-        return hljs.highlight(validLanguage, code).value
-      },
-      gfm: true,
-      sanitize: false,
-      smartLists: true,
-      smartypants: false,
-      xhtml: false,
-    })
-
     const target = issueList.find((o) => {
       return _toString(o.number) === _toString(params.number)
     })
@@ -61,17 +48,19 @@ function Post() {
         <div className="text-2xl mb-2 font-semibold">{post?.title}</div>
         {username && (
           <div className="text-base font-extralight">
-            September 5, 2019 by {username}
+            {formatDate(post?.updated_at, 'MMMM D, YYYY h:mm A')} by {username}
           </div>
         )}
       </div>
       <div className="markdown" dangerouslySetInnerHTML={{ __html: content }} />
+
+      <Comments issueNumber={post?.number} issueUrl={post?.html_url} />
+      <GoTop />
       <ListHeader
         classNames="mt-6 mb-2"
         left="&lt; Go Back"
         onLeftClick={navBack}
       />
-      <GoTop />
     </div>
   )
 }

@@ -10,7 +10,7 @@ function PostItem(props) {
       onClick={onClick}
     >
       <div>{title}</div>
-      <div>{date && dayjs(date).format('YYYY-MM-DD HH:mm')}</div>
+      <div>{date && dayjs(date).format('MMMM D, YYYY h:mm A')}</div>
     </div>
   )
 }

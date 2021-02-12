@@ -14,3 +14,8 @@ body,
 .overflow-auto {
   scroll-behavior: smooth;
 }
+
+.common-action {
+  @apply cursor-pointer;
+  @apply hover:underline;
+}

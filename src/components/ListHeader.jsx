@@ -10,10 +10,10 @@ function ListHeader(props) {
     classNames: _classNames,
   } = props
   const leftClassNames = cx({
-    'cursor-pointer hover:underline': onLeftClick,
+    'common-action': onLeftClick,
   })
   const rightClassNames = cx({
-    'cursor-pointer hover:underline': onRightClick,
+    'common-action': onRightClick,
   })
 
   const classNames = cx('font-bold mb-6 flex items-center justify-between', {

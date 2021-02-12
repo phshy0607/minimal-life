@@ -3,3 +3,4 @@ build/
 public/
 node_modules/
 config/
+tailwind.config.js
