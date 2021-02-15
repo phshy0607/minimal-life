@@ -21,6 +21,13 @@ const routes = [
       import(/* webpackChunkName: "Post" */ '../pages/Post'),
     ),
   },
+  {
+    path: '/search/results',
+    exact: true,
+    component: lazy(() =>
+      import(/* webpackChunkName: "Post" */ '../pages/SearchResult'),
+    ),
+  },
 ]
 
 export default routes

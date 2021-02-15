@@ -3,6 +3,7 @@ import issues from './issues'
 import repos from './repos'
 import global from './global'
 import comments from './comments'
+import search from './search'
 
 const store = init({
   models: {
@@ -10,6 +11,7 @@ const store = init({
     issues,
     repos,
     comments,
+    search,
   },
 })
 

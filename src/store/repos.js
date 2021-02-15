@@ -1,5 +1,4 @@
 import _get from 'lodash/get'
-import dayjs from 'dayjs'
 import { fetchRepos } from '../services/repos'
 
 export default {

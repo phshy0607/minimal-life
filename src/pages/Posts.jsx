@@ -21,9 +21,7 @@ function Posts() {
   const { isLoading, fetch } = useAsync(getIssues)
 
   useEffect(() => {
-    if (issueList.length === 0) {
-      fetch()
-    }
+    fetch()
   }, [])
 
   return (
