@@ -9,8 +9,8 @@ function RepoItem(props) {
       onClick={onClick}
     >
       <div className="mr-auto">{name}</div>
-      <div className="mr-4">Stars: {stars}</div>
-      <div>Forks: {forks}</div>
+      <div className="hidden sm:block mr-4">Stars: {stars}</div>
+      <div className="hidden sm:block ">Forks: {forks}</div>
     </div>
   )
 }
