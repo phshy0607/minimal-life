@@ -1,8 +1,8 @@
 import React from 'react'
-import Title from '../components/Title'
-import Slogan from '../components/Slogan'
-import Search from '../components/Search'
-import Tags from '../components/Tags'
+import Title from '@/components/Title'
+import Slogan from '@/components/Slogan'
+import Search from '@/components/Search'
+import Tags from '@/components/Tags'
 
 function LeftContent() {
   return (

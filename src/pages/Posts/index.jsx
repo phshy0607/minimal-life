@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect } from 'react'
-import { useDispatcher, useRoute, useSelector, useAsync } from '../hooks'
-import PostItem from '../components/PostItem'
-import ListHeader from '../components/ListHeader'
+import { useDispatcher, useRoute, useSelector, useAsync } from '@/hooks'
+import PostItem from '@/components/PostItem'
+import ListHeader from '@/components/List/Header'
 
 function Posts() {
   const { history } = useRoute()

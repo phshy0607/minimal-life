@@ -1,8 +1,8 @@
 import React, { useEffect, useMemo } from 'react'
 import _take from 'lodash/take'
-import { useDispatcher, useSelector } from '../hooks'
-import RepoItem from './RepoItem'
-import ListHeader from './ListHeader'
+import RepoItem from '@/components/RepoItem'
+import { useDispatcher, useSelector } from '@/hooks'
+import ListHeader from '@/components/List/Header'
 
 function RecentRepoList() {
   const repoList = useSelector(({ repos }) => repos.repoList)

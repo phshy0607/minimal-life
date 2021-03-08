@@ -1,5 +1,5 @@
-import axios from '../utils/request'
-import config from '../config'
+import axios from '@/utils/request'
+import config from '@/config'
 
 const { username } = config
 

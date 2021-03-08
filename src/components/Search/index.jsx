@@ -1,7 +1,7 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback } from 'react'
 import _trim from 'lodash/trim'
-import Input from './Input'
-import { useDispatcher, useRoute, useSelector } from '../hooks'
+import Input from '@/components/Input'
+import { useDispatcher, useRoute, useSelector } from '@/hooks'
 
 function Search() {
   const { history } = useRoute()

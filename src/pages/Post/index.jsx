@@ -4,7 +4,7 @@ import Comments from '@/components/Comments'
 import GoTop from '@/components/GoTop'
 import { fetchIssueByIssueNumber } from '@/services/issues'
 import { useRoute, useSelector } from '@/hooks'
-import ListHeader from '@/components/ListHeader'
+import ListHeader from '@/components/List/Header'
 import { formatDate } from '@/utils'
 import '@/style/markdown.scss'
 

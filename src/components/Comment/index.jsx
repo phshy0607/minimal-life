@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react'
-import { formatDate } from '../utils'
+import { formatDate } from '@/utils'
 
 function Comment(props) {
   const { avatar, userName, content, date, userHtml } = props

@@ -1,6 +1,6 @@
 import _get from 'lodash/get'
 import dayjs from 'dayjs'
-import { fetchIssues } from '../services/issues'
+import { fetchIssues } from '@/services/issues'
 
 export default {
   state: {

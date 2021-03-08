@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect, useMemo } from 'react'
 import _take from 'lodash/take'
-import { useAsync, useDispatcher, useRoute, useSelector } from '../hooks'
-import PostItem from './PostItem'
-import ListHeader from './ListHeader'
+import ListHeader from '@/components/List/Header'
+import PostItem from '@/components/PostItem'
+import { useAsync, useDispatcher, useRoute, useSelector } from '@/hooks'
 
 function RecentPostList() {
   const { history } = useRoute()

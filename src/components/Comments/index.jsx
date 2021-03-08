@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
-import { useDispatcher, useSelector } from '../hooks'
-import Comment from './Comment'
-import ListHeader from './ListHeader'
+import Comment from '@/components/Comment'
+import { useDispatcher, useSelector } from '@/hooks'
+import ListHeader from '@/components/List/Header'
 
 function Comments(props) {
   const { issueNumber, issueUrl } = props

@@ -1,5 +1,5 @@
 import _get from 'lodash/get'
-import { fetchCommentsByIssueNumber } from '../services/comments'
+import { fetchCommentsByIssueNumber } from '@/services/comments'
 
 export default {
   state: {

@@ -1,5 +1,5 @@
 import _get from 'lodash/get'
-import { searchIssues, searchRepos } from '../services/search'
+import { searchIssues, searchRepos } from '@/services/search'
 
 export default {
   state: {

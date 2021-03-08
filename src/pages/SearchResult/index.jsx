@@ -1,10 +1,10 @@
 import React, { useCallback, useEffect, useMemo } from 'react'
 import _isEmpty from 'lodash/isEmpty'
 import _trim from 'lodash/trim'
-import ListHeader from '../components/ListHeader'
-import PostItem from '../components/PostItem'
-import RepoItem from '../components/RepoItem'
-import { useDispatcher, useRoute, useSelector } from '../hooks'
+import ListHeader from '@/components/List/Header'
+import PostItem from '@/components/PostItem'
+import RepoItem from '@/components/RepoItem'
+import { useDispatcher, useRoute, useSelector } from '@/hooks'
 
 function SearchResult() {
   const { history } = useRoute()

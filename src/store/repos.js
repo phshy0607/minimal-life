@@ -1,5 +1,5 @@
 import _get from 'lodash/get'
-import { fetchRepos } from '../services/repos'
+import { fetchRepos } from '@/services/repos'
 
 export default {
   state: {

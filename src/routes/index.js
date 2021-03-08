@@ -1,5 +1,5 @@
 import { lazy } from 'react'
-import Home from '../pages/Home'
+import Home from '@/pages/Home'
 
 const routes = [
   {
@@ -11,21 +11,21 @@ const routes = [
     path: '/posts',
     exact: true,
     component: lazy(() =>
-      import(/* webpackChunkName: "Posts" */ '../pages/Posts'),
+      import(/* webpackChunkName: "Posts" */ '@/pages/Posts'),
     ),
   },
   {
     path: '/post/:number',
     exact: true,
     component: lazy(() =>
-      import(/* webpackChunkName: "Post" */ '../pages/Post'),
+      import(/* webpackChunkName: "Post" */ '@/pages/Post'),
     ),
   },
   {
     path: '/search/results',
     exact: true,
     component: lazy(() =>
-      import(/* webpackChunkName: "Post" */ '../pages/SearchResult'),
+      import(/* webpackChunkName: "Post" */ '@/pages/SearchResult'),
     ),
   },
 ]

@@ -1,12 +1,10 @@
-import axios from '../utils/request'
-import config from '../config'
+import axios from '@/utils/request'
+import config from '@/config'
 
-const {
-  username,
-} = config
+const { username } = config
 
-export function fetchUserInfo () {
-  const url = `/users/${username}`;
+export function fetchUserInfo() {
+  const url = `/users/${username}`
   return axios.get(url)
 }
 
