@@ -3,40 +3,25 @@ import smoothscroll from 'smoothscroll-polyfill'
 import { Provider } from 'react-redux'
 import { HashRouter } from 'react-router-dom'
 import { renderRoutes } from 'react-router-config'
-import routes from './routes'
-import store from './store'
-import Layout from './layouts/Layout'
-import LeftContent from './layouts/LeftContent'
-import Footer from './layouts/Footer'
-
-smoothscroll.polyfill()
+import routes from '@/routes'
+import store from '@/store'
+import Layout from '@/Layout'
+import Cover from '@/pages/Cover'
+import useAppConfig from '@/hooks/useAppConfig'
 
 function App() {
-  useEffect(() => {
-    window.marked.setOptions({
-      renderer: new window.marked.Renderer(),
-      highlight(code, language) {
-        const hljs = window.hljs
-        const validLanguage = hljs.getLanguage(language)
-          ? language
-          : 'plaintext'
-        return hljs.highlight(validLanguage, code).value
-      },
-      gfm: true,
-      sanitize: false,
-      smartLists: true,
-      smartypants: false,
-      xhtml: false,
-    })
-  }, [])
-
+  useAppConfig()
   return (
     <Provider store={store}>
       <HashRouter>
         <Layout
-          left={<LeftContent />}
+          left={<Cover />}
           right={<Suspense fallback={null}>{renderRoutes(routes)}</Suspense>}
-          footer={<Footer />}
+          footer={
+            <div className="text-gray-400 p-3">
+              @ Powered By Tailwind and Vite
+            </div>
+          }
         />
       </HashRouter>
     </Provider>
