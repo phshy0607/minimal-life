@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "module": "commonjs", // 默认找index文件
+    "target": "ES6",
+    "jsx": "react", // 除了index.js文件，还会找.jsx结尾的文件
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}

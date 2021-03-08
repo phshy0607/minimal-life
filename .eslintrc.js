@@ -18,9 +18,15 @@ module.exports = {
     react: {
       version: 'detect',
     },
-    settings: {
-      'import/extensions': ['.js', '.jsx'],
+    'import/resolver': {
+      'eslint-import-resolver-custom-alias': {
+        alias: {
+          '@': './src',
+        },
+        extensions: ['.js', '.jsx'],
+      },
     },
+    'import/extensions': ['.js', '.jsx'],
   },
   parserOptions: {
     ecmaFeatures: {

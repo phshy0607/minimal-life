@@ -1,12 +1,12 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import _toString from 'lodash/toString'
-import { useRoute, useSelector } from '../hooks'
-import { fetchIssueByIssueNumber } from '../services/issues'
-import ListHeader from '../components/ListHeader'
-import GoTop from '../components/GoTop'
-import Comments from '../components/Comments'
-import { formatDate } from '../utils'
-import '../style/markdown.scss'
+import Comments from '@/components/Comments'
+import GoTop from '@/components/GoTop'
+import { fetchIssueByIssueNumber } from '@/services/issues'
+import { useRoute, useSelector } from '@/hooks'
+import ListHeader from '@/components/ListHeader'
+import { formatDate } from '@/utils'
+import '@/style/markdown.scss'
 
 function Post() {
   const { params, history } = useRoute()

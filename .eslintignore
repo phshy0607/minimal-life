@@ -2,6 +2,5 @@
 build/
 public/
 node_modules/
-config/
-tailwind.config.js
 scripts/
+*.config.js
